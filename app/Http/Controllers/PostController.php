@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index() {
-        $posts = Post::where('is_published',0)->get();
+        $posts = Post::withTrashed()->get();
 
         dd($posts);
         return $str;
@@ -54,5 +54,11 @@ class PostController extends Controller
             ]
         );
         dd('updated');
+    }
+
+    public function delete() {
+        $post = Post::find(3);
+        $post->delete();
+        dd('deleted');
     }
 }
