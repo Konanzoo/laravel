@@ -12,8 +12,7 @@ class PostController extends Controller
     public function index() {
         $posts = Post::withTrashed()->get();
 
-        dd($posts);
-        return $str;
+        return view('posts', compact('posts'));
     }
 
     public function create() {
