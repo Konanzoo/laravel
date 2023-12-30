@@ -5,6 +5,8 @@
 /public/storage
 /storage/*.key
 /vendor
+/mysql
+/public/.idea
 .env
 .env.backup
 .env.production

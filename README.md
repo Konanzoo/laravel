@@ -1,2 +1,1 @@
-# laravel
-Learn laravel framework
+nginx + php + mysql + phpmyadmin
