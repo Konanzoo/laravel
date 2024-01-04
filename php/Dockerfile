@@ -4,9 +4,8 @@ RUN docker-php-ext-install pdo mysqli pdo_mysql
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
- RUN apt-get update && apt-get install -y \
-#     git \
-#     curl \
-     zip \
-#     vim \
-     unzip
+RUN apt-get update && apt-get install -y zip
+
+RUN apt-get update && apt-get install -y unzip
+
+RUN apt-get install npm -y
